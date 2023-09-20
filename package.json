@@ -3,27 +3,20 @@
   "version": "1.0.3",
   "description": "watch fs changes and meow",
   "bin": {
-    "meowatch": "lib/index.js"
-  },
-  "scripts": {
-    "dev": "babel -w src/index.js -o lib/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "meowatch": "meowatch.mjs"
   },
   "keywords": [
     "watch",
     "cli",
     "command",
-    "line"
+    "line",
+    "fs"
   ],
   "author": "wong2",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^1.1.3",
-    "chokidar": "^1.5.0",
-    "yargs": "^4.7.1"
-  },
-  "devDependencies": {
-    "babel": "^6.5.2",
-    "babel-cli": "^6.9.0"
+    "chalk": "^5.3.0",
+    "chokidar": "^3.5.3",
+    "yargs": "^17.7.2"
   }
 }

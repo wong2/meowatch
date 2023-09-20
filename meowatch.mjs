@@ -2,7 +2,9 @@
 
 import chalk from 'chalk'
 import chokidar from 'chokidar'
-import { argv } from 'yargs'
+import process from 'node:process';
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
 
 const EVENT_DESC = {
   add: chalk.green('file created'),
@@ -12,14 +14,10 @@ const EVENT_DESC = {
   change: chalk.yellow('file changed'),
 };
 
-if (argv._.length) {
-  var path = argv._[0];
-} else {
-  var path = '.';
-}
+const argv = yargs(hideBin(process.argv)).argv
+const path = argv._[0] || '.'
 
 console.log(chalk.bold(`Watching ${path}`))
-
 
 const options = {
   ignoreInitial: true,
