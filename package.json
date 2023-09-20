@@ -1,6 +1,6 @@
 {
   "name": "meowatch",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "watch fs changes and meow",
   "bin": {
     "meowatch": "meowatch.mjs"
